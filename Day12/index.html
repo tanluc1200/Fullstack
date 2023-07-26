@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <input type="radio" name="option" id="login" hidden checked />
+    <input type="radio" name="option" id="register" hidden />
+    <main>
+      <div class="row">
+        <div class="col">
+          <div class="brand">
+            <div class="brand__logo">
+              <img
+                src="https://xanhrii.github.io/k2-f8-fullstack-course/rii_day12_css/img/logo.png"
+                alt=""
+              />
+            </div>
+            <h1 class="brand__title">
+              <span class="brand__title-sm">welcome to</span>
+              VIKINGER
+            </h1>
+            <p class="brand__desc">
+              The next generation social network & community! Connect with your
+              friends and play with our quests and badges gamification system!
+            </p>
+            <div class="brand__cta">
+              <label for="login" class="brand__cta-login">login</label>
+              <label for="register" class="brand__cta-register">register</label>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-wrap">
+            <!-- Login form -->
+            <form action="" class="form form-login" id="login">
+              <h2 class="form__title">Account Login</h2>
+              <label for="" class="form__input-wrap">
+                <input type="text" id="email" required placeholder=" " />
+                <span class="form__label-title">Username or Email</span>
+              </label>
+              <label for="" class="form__input-wrap">
+                <input type="password" id="password" required placeholder=" " />
+                <span class="form__label-title">Password</span>
+              </label>
+              <div class="form__remember-wrap">
+                <input type="checkbox" id="remember" hidden />
+                <label for="remember" class="form__remember-title">
+                  Remember Me
+                </label>
+                <a href="#!" class="form__remember-link">Forgot Password?</a>
+              </div>
+              <button class="form__btn" type="submit">
+                Login to Your Account
+              </button>
+              <span class="form__social-title"></span>
+              <div class="form__social">
+                <i class="form__social-icon fa-brands fa-facebook-f"></i>
+                <i class="form__social-icon fa-brands fa-youtube"></i>
+                <i class="form__social-icon fa-brands fa-twitter"></i>
+                <i class="form__social-icon fa-brands fa-instagram"></i>
+              </div>
+            </form>
+            <!-- Register form -->
+            <form action="" class="form form-register" id="login">
+              <h2 class="form__title">Create your Account!</h2>
+              <label for="" class="form__input-wrap">
+                <input type="text" id="email" required placeholder=" " />
+                <span class="form__label-title">Your Email</span>
+              </label>
+              <label for="" class="form__input-wrap">
+                <input type="text" id="email" required placeholder=" " />
+                <span class="form__label-title"> Username</span>
+              </label>
+              <label for="" class="form__input-wrap">
+                <input type="password" id="password" required placeholder=" " />
+                <span class="form__label-title">Password</span>
+              </label>
+              <label for="" class="form__input-wrap">
+                <input type="password" id="password" required placeholder=" " />
+                <span class="form__label-title">Repeat Password</span>
+              </label>
+              <div class="form__remember-wrap">
+                <input type="checkbox" id="send" hidden />
+                <label for="send" class="form__remember-title">
+                  Send Me News And Updates Via Email
+                </label>
+              </div>
+              <button class="form__btn" type="submit">Register Now!</button>
+              <span class="form__notice">
+                You'll receive a confirmation email in your inbox with a link to
+                activate your account. If you have any problems.
+                <a href="#!">Contact us!</strong>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+body {
+  color: white;
+  background-color: white;
+  background: url('https://xanhrii.github.io/k2-f8-fullstack-course/rii_day12_css/img/bg.jpg')
+    no-repeat center/cover;
+  height: 100vh;
+  font-family: 'Titillium Web', sans-serif;
+}
+main {
+  width: 100%;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  height: 100vh;
+}
+.col:first-child {
+  padding-inline: 170px 80px;
+  justify-content: start;
+  align-items: center;
+}
+.brand {
+  margin-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brand__title {
+  margin-block: 40px 10px;
+  line-height: 1;
+  display: grid;
+  font-size: 100px;
+  font-weight: 800;
+}
+.brand__title-sm {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+}
+.brand__desc {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.brand__cta {
+  display: flex;
+  width: 360px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid white;
+  overflow: hidden;
+}
+.brand__cta label {
+  flex: 0 0 50%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  color: #401378;
+  font-weight: 600;
+  justify-content: center;
+  text-transform: capitalize;
+}
+#login:checked ~ main .brand__cta-login,
+#register:checked ~ main .brand__cta-register {
+  background-color: white;
+  color: black;
+}
+.form-wrap {
+  position: relative;
+  overflow: hidden;
+  color: #3e3f5e;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+.form {
+  background-color: #ffffff;
+  width: 483px;
+  height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  border-radius: 10px;
+  padding: 40px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: 300% -50%;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  animation: showBox 1s ease-in-out;
+  visibility: hidden;
+}
+#login:checked ~ main .form-login,
+#register:checked ~ main .form-register {
+  z-index: 2;
+  translate: -50% -50%;
+  visibility: visible;
+}
+@keyframes showBox {
+  0% {
+    translate: 100% -50%;
+  }
+  100% {
+    translate: -50% -50%;
+  }
+}
+.form-register {
+  row-gap: 15px;
+}
+.form__input-wrap {
+  position: relative;
+}
+.form__notice {
+  font-size: 14px;
+  color: #3e3f5e;
+}
+.form__notice a {
+  text-decoration: none;
+  color: #23d2e2;
+  font-weight: 700;
+}
+.form__input-wrap input {
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid #dedeea;
+  padding: 15px 10px;
+  padding-left: 20px;
+  transition: border-color 275ms ease;
+  background-color: white;
+}
+.form__input-wrap input:focus {
+  border-color: #47309c;
+}
+.form__input-wrap input:focus + .form__label-title,
+.form__input-wrap input:not(:placeholder-shown) + .form__label-title {
+  transform: translateY(-37px);
+  color: #47309c;
+  text-shadow: -0.1px -0.1px currentColor, 0.1px 0.1px currentColor;
+}
+.form__label-title {
+  background-color: white;
+  padding-inline: 5px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #adafca;
+  font-weight: 600;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 300ms;
+}
+.form__remember-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__remember-link {
+  font-weight: 700;
+  color: #adafca;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.form__remember-link:hover {
+  color: #1abcff;
+}
+.form__remember-title {
+  position: relative;
+  font-weight: 600;
+  color: #3e3f5e;
+  font-size: 16px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.form__remember-title::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dedeea;
+  border-radius: 5px;
+  background-color: transparent;
+  left: 0;
+  transition: 0.2s;
+}
+.form__remember-title::after {
+  position: absolute;
+  content: '\2713';
+  text-align: center;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: #3e3f5e;
+  left: 2px;
+  top: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+#remember:checked ~ .form__remember-title::after,
+#send:checked ~ .form__remember-title::after {
+  opacity: 1;
+  visibility: visible;
+}
+#remember:checked ~ .form__remember-title::before,
+#send:checked ~ .form__remember-title::before {
+  background-color: aquamarine;
+  border-color: aquamarine;
+}
+.form__btn {
+  cursor: pointer;
+  padding: 12px;
+  background-color: rgba(97, 93, 250, 1);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 300ms;
+}
+.form-register .form__btn {
+  background-color: rgba(35, 210, 226, 1);
+}
+.form-register .form__btn:hover {
+  background-color: rgba(35, 210, 226, 0.8);
+}
+.form__btn:hover {
+  background-color: rgba(97, 93, 250, 0.8);
+}
+.form__social-title {
+  position: relative;
+  height: 15px;
+  overflow: hidden;
+}
+.form__social-title::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background-color: #dedeea;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form__social-title::after {
+  position: absolute;
+  content: 'Login with your Social Account';
+  white-space: nowrap;
+  height: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  padding: 0 5px;
+}
+.form__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+.form__social-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: 300ms ease-in-out;
+}
+.form__social-icon:hover {
+  transform: translateY(-10px);
+}
+.form__social-icon.fa-facebook-f {
+  background-color: #3763d2;
+}
+.form__social-icon.fa-youtube {
+  background-color: #ff0000;
+}
+.form__social-icon.fa-twitter {
+  background-color: #1abcff;
+}
+.form__social-icon.fa-instagram {
+  background-color: pink;
+}
