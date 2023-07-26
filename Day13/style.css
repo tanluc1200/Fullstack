@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Sofia Sans", sans-serif;
+  color: #333;
+  margin-bottom: 100px;
+}
+
+.wrapper__inner {
+  max-width: 1200px;
+  width: calc(100% - 30px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr repeat(4, 1fr);
+  grid-template-rows: auto repeat(4, 1fr);
+  -moz-column-gap: 38px;
+       column-gap: 38px;
+  grid-template-areas: "sidebar header header header header" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.sidebar .title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-block: 50px 30px;
+  color: black;
+}
+.sidebar__logo {
+  width: 98px;
+  height: 47px;
+}
+.sidebar__list {
+  display: grid;
+  row-gap: 20px;
+}
+.sidebar__item {
+  background-color: transparent;
+  transition: 300ms;
+}
+.sidebar__item:hover {
+  background-color: #eee;
+}
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  padding: 10px;
+  font-weight: 600;
+}
+.sidebar__link img {
+  width: 25px;
+  height: 25px;
+}
+.sidebar__link span {
+  position: relative;
+  font-size: 18px;
+  bottom: -3px;
+}
+.sidebar__chat {
+  padding: 10px;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  left: 8.5%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.sidebar__chat-img {
+  background-color: #f6f6f6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__chat-img img {
+  width: 20px;
+  height: 20px;
+}
+
+.header {
+  grid-area: header;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.header__logo {
+  width: 98px;
+  height: 47px;
+  display: none;
+}
+.header__search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.header__search img {
+  width: 21px;
+  height: 21px;
+}
+.header__search input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 600;
+  color: #adadad;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+.header__link {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+.header__link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 300ms;
+}
+.header__link:hover::after, .header__link.active::after {
+  width: 100%;
+}
+.header__cta {
+  display: flex;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.header__cta a {
+  width: 26px;
+  height: 26px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-rows: 190px;
+  gap: 20px;
+}
+.main .wide {
+  grid-column: span 2;
+}
+.main .tall {
+  grid-row: span 2;
+}
+.main__pic {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.main__pic img {
+  transition: 300ms;
+}
+.main__pic:hover img {
+  scale: 1.2;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper__inner {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto) repeat(3, 1fr);
+    grid-template-areas: "header header header header header " "sidebar sidebar sidebar sidebar sidebar" "main main main main main" "main main main main main" "main main main main main";
+  }
+  .sidebar {
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .sidebar .title {
+    margin-block: 10px;
+  }
+  .sidebar__logo {
+    display: none;
+  }
+  .sidebar__list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .header {
+    height: auto;
+    padding-block: 20px;
+  }
+  .header__logo {
+    display: block;
+  }
+  .header__list {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

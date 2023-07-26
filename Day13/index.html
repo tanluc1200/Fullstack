@@ -3,14 +3,145 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>HTML CSS - DAY 13</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700;800;900;1000&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+            integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-            molestias quaerat commodi laboriosam dicta hic iure ab facere
-            mollitia qui ipsam quibusdam cum, consectetur ipsa quisquam
-            repellendus. Reprehenderit, ab quibusdam.
-        </p>
+        <div class="wrapper">
+            <div class="wrapper__inner">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Logo -->
+                    <div class="sidebar__logo">
+                        <img src="img/logo.svg" alt="" />
+                    </div>
+                    <h3 class="title">Explore</h3>
+                    <!-- List -->
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-1.svg" alt="" />
+                                <span> New In </span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-2.svg" alt="" />
+                                <span> Clothing </span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-3.svg" alt="" />
+                                <span> Shoes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-4.svg" alt="" />
+                                <span>Accessories </span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-5.svg" alt="" />
+                                <span>Activewear </span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-6.svg" alt="" />
+                                <span> Gifts & Living </span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#!" class="sidebar__link">
+                                <img src="img/sidebar-icon-7.svg" alt="" />
+                                <span> Inspiration </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Btn chat -->
+                    <button class="sidebar__chat">
+                        <div class="sidebar__chat-img">
+                            <img src="img/chat.svg" alt="" />
+                        </div>
+                        <span class="sidebar__chat-text">Help Center</span>
+                    </button>
+                </aside>
+                <!-- Header -->
+                <header class="header">
+                    <div class="header__logo">
+                        <img src="img/logo.svg" alt="" />
+                    </div>
+                    <form action="" class="header__search">
+                        <img src="img/search.svg" alt="" />
+                        <input type="text" placeholder="Search store" />
+                    </form>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#!" class="header__link active"
+                                >Products</a
+                            >
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Story</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Manufacturing</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#!" class="header__link">Packaging</a>
+                        </li>
+                    </ul>
+                    <div class="header__cta">
+                        <a class="cart" href="#!">
+                            <img src="img/cart.svg" alt="" />
+                        </a>
+                        <a href="#!"><img src="img/user.svg" alt="" /></a>
+                    </div>
+                </header>
+                <!-- Main -->
+                <main class="main">
+                    <div class="main__pic wide">
+                        <img src="img/main-img-1.jpg" alt="" />
+                    </div>
+                    <div class="main__pic tall">
+                        <img src="img/main-img-2.jpg" alt="" />
+                    </div>
+                    <div class="main__pic wide">
+                        <img src="img/main-img-3.jpg" alt="" />
+                    </div>
+                    <div class="main__pic tall">
+                        <img src="img/main-img-4.jpg" alt="" />
+                    </div>
+                    <div class="main__pic tall">
+                        <img src="img/main-img-5.jpg" alt="" />
+                    </div>
+                    <div class="main__pic wide">
+                        <img src="img/main-img-6.jpg" alt="" />
+                    </div>
+                    <div class="main__pic wide">
+                        <img src="img/main-img-7.jpg" alt="" />
+                    </div>
+                    <div class="main__pic tall">
+                        <img src="img/main-img-8.jpg" alt="" />
+                    </div>
+                </main>
+            </div>
+        </div>
     </body>
 </html>
